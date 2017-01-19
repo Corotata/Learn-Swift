@@ -80,5 +80,4 @@ let corotata2 = urlString.substring(with: Range(startIndex..<endIndex))
 
 let comIndex = urlString.index(urlString.endIndex, offsetBy: -3)
 let com2 = urlString.substring(from: comIndex)
-
 //: [Next](@next)
