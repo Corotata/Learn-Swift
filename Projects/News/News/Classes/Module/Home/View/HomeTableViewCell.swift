@@ -22,22 +22,8 @@ class HomeTableViewCell: UITableViewCell {
             
             titleLabel.text = news?.title
             sourceLabel.text = news?.source
-            
             replyCountLabel.text = "\(news?.replyCount ?? 0)跟帖"
         }
     
     }
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

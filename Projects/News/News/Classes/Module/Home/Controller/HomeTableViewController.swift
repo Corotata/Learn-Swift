@@ -21,12 +21,8 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         setupNavigationBar()
         loadData()
-    
-    
     }
     
 }
@@ -42,7 +38,7 @@ extension HomeTableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"navigation_search"), style: .plain, target: self, action: #selector(searchBarButtonItemClick))
     }
     
-    func searchBarButtonItemClick() {
+    fileprivate func searchBarButtonItemClick() {
         
     }
     
@@ -52,8 +48,7 @@ extension HomeTableViewController {
 
 // MARK: - Table view data source
 extension HomeTableViewController {
-    
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -73,7 +68,7 @@ extension HomeTableViewController {
 
 // MARK: - LoadData
 extension HomeTableViewController {
-    func loadData() {
+    fileprivate func loadData() {
         HTTPHelper.requestData(URLString:"http://c.m.163.com/nc/article/list/T1348649079062/0-100.html" , type: .GET, parameters: nil) {[unowned self] (response, error) in
             guard error == nil else {
                 print(error as Any)
@@ -94,8 +89,6 @@ extension HomeTableViewController {
             self.tableView .reloadData()
             
         }
-
-    
     }
 }
 
