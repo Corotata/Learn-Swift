@@ -8,6 +8,12 @@
 
 import UIKit
 
+//写这份代码的注意点有几点
+//1.要注意Swift的代码风格，尽可能让主class保持简洁，采用extension将各种类型的代码分离开来，使得结构清晰
+//2.使用setValuesForKeys(dict)，给模型赋值，并重写setValue(_ value: Any?, forUndefinedKey key: String)对于没有定义的属性的支持
+//3.了解闭包的使用方式
+//4.处理循环引用的方法，当在闭包情况下使用 [weak self]或者 [unowned self],两者的差别是weak解除引用时，会将值置为nil，所以引用时，self需要加？，即self?,而后者则不用，但必须保证使用其间不能为nil，否则会引发程序崩溃
+
 
 let kHomeCellIdentifier = "HomeTableViewCell"
 
