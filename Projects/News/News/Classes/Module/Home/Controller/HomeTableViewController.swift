@@ -38,7 +38,7 @@ extension HomeTableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"navigation_search"), style: .plain, target: self, action: #selector(searchBarButtonItemClick))
     }
     
-    fileprivate func searchBarButtonItemClick() {
+    @objc fileprivate func searchBarButtonItemClick() {
         
     }
     
